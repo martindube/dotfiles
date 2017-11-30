@@ -1,0 +1,14 @@
+[merge]
+  tool = diffuse
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow
+  remote = white
+
+[color "status"]
+  added = green
+  changed = magenta
+  untracked = cyan
