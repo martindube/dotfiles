@@ -26,6 +26,8 @@ Technologies used:
 
 Please note that this is a work in progress.
 
+![Overview](https://github.com/martindube/dotfiles/raw/master/.dotfiles_files/my_theme.png)
+
 
 ## Installation
 
@@ -34,6 +36,13 @@ cd $HOME
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 git clone --bare https://github.com/martindube/dotfiles $HOME/.dotfiles
 config checkout
+```
+
+Temporary hack.
+
+```
+cp .dotfiles_files/batbar.lua .config/awesome/lain/widget/contrib/
+cp .dotfiles_files/my_mpd.lua .config/awesome/lain/widget/contrib/
 ```
 
 ## Credits
