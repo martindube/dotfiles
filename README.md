@@ -45,6 +45,7 @@ cp .dotfiles_files/batbar.lua .config/awesome/lain/widget/contrib/
 cp .dotfiles_files/my_mpd.lua .config/awesome/lain/widget/contrib/
 ```
 
+
 ## Credits
 
 Thanks to Nicola Paolucci for this blog post: https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/

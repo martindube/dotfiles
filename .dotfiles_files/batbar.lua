@@ -20,6 +20,7 @@ local math       = { abs    = math.abs,
 local string     = { format = string.format }
 local ipairs     = ipairs
 local tonumber   = tonumber
+local setmetatable = setmetatable
 
 -- Battery infos
 -- lain.widget.bat
