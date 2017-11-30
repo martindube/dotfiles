@@ -2,16 +2,16 @@
 
 ## Introduction
 
-As an infosec enthousiast and professional, I play on my laptop all day long. I believe that most linux users should customize their computers for their need, not the opposite. This repository is the result of many hours of customization.
+As an infosec enthousiast and professional, I have my face in front of a laptop all day long. For this reason, I have customized my laptop to be responsive and easy on the eyes. This repository is the result of many hours of customization, which I am glad to share. Please note that this is, and will always be, a work in progress.
 
-The theme follow the Zenburn color scheme. However, due to dark and transparent background, the color palet was customized on several tools (especially vim, git and zsh)
+The theme follows the Zenburn color scheme. However, due to dark and transparent background, the color palet was adjusted on several tools (especially vim, git and urxvt)
 
 Technologies used:
 
 * Laptop: Dell Inc. XPS 15 9550
 * OS: Arch Linux w/ BlackArch repo
 * Display Manager: none
-* Window Manager: awesome-wm
+* Window Manager: awesome-wm w/ several libraries and inspiration from other public repos
 * Lock Screen: i3lock-fancy
 * Terminal emulator: urxvt
 * Terminal emulator transparency: xcompmgr
@@ -24,8 +24,6 @@ Technologies used:
 * Screenshots: shutter (TODO: Switch to a more lightweight solution)
 * Main font: Inconsolata 12
 
-Please note that this is a work in progress.
-
 ![Overview](https://github.com/martindube/dotfiles/raw/master/.dotfiles_files/my_theme.png)
 
 
@@ -34,7 +32,7 @@ Please note that this is a work in progress.
 ```
 cd $HOME
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-git clone --bare https://github.com/martindube/dotfiles $HOME/.dotfiles
+git clone --recursive --bare https://github.com/martindube/dotfiles $HOME/.dotfiles
 config checkout
 ```
 
