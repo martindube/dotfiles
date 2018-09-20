@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As an infosec enthousiast and professional, My face is in front of a laptop all day long. For this reason, I have customized my laptop to be responsive and easy on the eyes. This repository is the result of many hours of customization, which I am glad to share. Please note that this is, and will always be, a work in progress.
+As an infosec enthousiast and professional, I work in front of screens all day long. For this reason, I have customized my laptop to be responsive and easy on the eyes. This repository is the result of many hours of customization, which I am glad to share. Please note that this is, and will always be, a work in progress.
 
 The theme follows the Zenburn color scheme. However, due to dark and transparent background, the color palet was adjusted on several tools (especially vim, git and urxvt)
 
