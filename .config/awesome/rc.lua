@@ -368,7 +368,7 @@ end
 -- {{{ Customized functions
 
 customization.func.system_lock = function ()
-    awful.util.spawn("/usr/bin/i3lock-fancy -gpf inconsolata -- /usr/bin/scrot -z")
+    awful.util.spawn("/usr/bin/i3lock-fancy-dualmonitor -gpf inconsolata -- /usr/bin/scrot -z")
 end
 
 customization.func.system_suspend = function ()
@@ -1734,14 +1734,14 @@ function get_net_widget()
     local vpn_widget = wibox.widget.textbox()
 
     local function update()
-        wifi_ipv4_addr = ip_utils.get_ipv4("wlp2s0")
+        wifi_ipv4_addr = ip_utils.get_ipv4("wlp0s20f3")
         if wifi_ipv4_addr == nil then
             wifi_ipv4_addr = 'N/A'
         end
         wifi_widget:set_markup(markup.font(beautiful.font, markup(
                         beautiful.fg_normal, "" .. wifi_ipv4_addr .. " ")))
 
-        wired_ipv4_addr = ip_utils.get_ipv4("enp0s20f0u2u3i5")
+        wired_ipv4_addr = ip_utils.get_ipv4("enp0s31f6")
         if wired_ipv4_addr == nil then
             wired_ipv4_addr = 'N/A'
         end
@@ -2479,7 +2479,7 @@ awful.key({}, "XF86Display", function ()
 end),
 
 awful.key({}, "Print", function ()
-    awful.util.spawn("xfce4-screenshooter")
+    awful.util.spawn("/usr/bin/flameshot gui")
 end),
 
 uniarg:key_repeat({}, "XF86Launch1", function ()
@@ -2934,3 +2934,6 @@ end
 -- HACK continue
 --awful.util.spawn_with_shell("if ! [ -e " .. awesome_autostart_once_fname .. " ]; then dex -a -e awesome; touch " .. awesome_autostart_once_fname .. "; fi")
 --customization.func.client_opaque_on(nil) -- start xcompmgr
+
+-- Tools to start 
+awful.util.spawn_with_shell("/usr/bin/flameshot")

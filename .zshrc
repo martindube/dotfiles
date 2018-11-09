@@ -6,6 +6,7 @@ killall zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="mdube"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -57,10 +58,15 @@ plugins=(git)
 #
 # Set environment variables
 #
-export PATH="/home/mdube/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="/home/mdube/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/bin/core_perl:/usr/bin/vendor_perl"
+#export PATH="/home/mdube/.bin:/home/mdube/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/mdube/.gem/ruby/2.4.0/bin:/usr/bin/core_perl"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+#export PATH="$PATH:$HOME/.rvm/bin"
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+
+export BROWSER='google-chrome-stable'
 
 export TERM='xterm-256color'
 export GNUPGHOME=~/.gnupg
@@ -88,13 +94,25 @@ source $HOME/.zshrc.nogit
 #alias vim.ide="/usr/bin/vim" 
 #alias vim="vim -u ~/.vimrc-basic"
 
-alias dualscreen="xrandr --output HDMI1 --auto --right-of LVDS1"
+alias jobscreen="xrandr --output eDP1 --mode 1920x1080 && xrandr --output DP1-8 --mode 1920x1080 --right-of eDP1 && xrandr --output DP1-1-8 --mode 1920x1080 --left-of eDP1"
+alias homescreen="xrandr --output DP1-8 --mode 1920x1080 && xrandr --output eDP1 --off && xrandr --output DP1-1-8 --mode 1920x1080 --right-of DP1-8 && xrandr --output DP1-1-1-8 --mode 1920x1080 --right-of DP1-1-8"
+alias laptopscreen="xrandr --output DP1-8 --off --output DP1-1-8 --off --output DP1-1-1-8 --off --output eDP1 --mode 1920x1080"
 
-alias lock='/usr/bin/i3lock-fancy -gpf inconsolata -- /usr/bin/scrot -z'
 alias xc='xclip -i -selection clipboard'
 
 alias ip='/usr/bin/grc ip'
 alias grepip="grep -oE '((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])'"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias stopwifi='sudo systemctl stop netctl-auto@wlp0s20f3'
+
+alias tasknc="TERM=xterm tasknc"
+
+alias resumevbox="dbus-send --system \
+  /org/freedesktop/login1 \
+  org.freedesktop.login1.Manager.PrepareForSleep \
+  boolean:false"
+
+alias veil="sudo docker run -it -v /home/mdube/shr/shit/veil-output:/var/lib/veil/output:Z --rm mattiasohlsson/veil"
 

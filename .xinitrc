@@ -31,11 +31,8 @@ fi
 # mpd
 [ ! -s ~/.config/mpd/pid ] && /usr/bin/mpd
 
-# Applications
-/usr/bin/shutter --min_at_startup &
-
-# Disable touchpad while typing
-/usr/bin/syndaemon -i 0.3 -d
+# Screenshots (Moved to rc.lua)
+#/usr/bin/flameshot &
 
 # Java look and feel
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Djava.net.preferIPv4Stack=true'
