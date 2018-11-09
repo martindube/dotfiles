@@ -1,9 +1,0 @@
-[submodule ".config/awesome/lain"]
-	path = .config/awesome/lain
-	url = https://github.com/copycat-killer/lain/
-[submodule ".config/awesome/modules/lua-ip"]
-	path = .config/awesome/modules/lua-ip
-	url = https://github.com/Mashape/lua-ip
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
