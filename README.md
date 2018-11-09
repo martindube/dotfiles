@@ -2,26 +2,25 @@
 
 ## Introduction
 
-As an infosec enthousiast and professional, I work in front of screens all day long. For this reason, I have customized my laptop to be responsive and easy on the eyes. This repository is the result of many hours of customization, which I am glad to share. Please note that this is, and will always be, a work in progress.
-
-The theme follows the Zenburn color scheme. However, due to dark and transparent background, the color palet was adjusted on several tools (especially vim, git and urxvt)
+This repository is the result of many hours of laptop customization where I've seek low-contrast color theme, overall responsiveness and ergonomics. Feel free to use and update.
 
 Technologies used:
 
-* Laptop: Dell Inc. XPS 15 9550
+* Laptop: Lenovo ThinkPad X1 Extreme
 * OS: Arch Linux w/ BlackArch repo
+* FS: OpenZFS :)
 * Display Manager: none
 * Window Manager: awesome-wm w/ several libraries and inspiration from other public repos
 * Lock Screen: i3lock-fancy
 * Terminal emulator: urxvt
 * Terminal emulator transparency: xcompmgr
 * Shell: zsh w/ oh-my-zsh
-* Browser: google-chrome-stable
+* Browser: google-chrome-stable and firefox
 * File Explorer: PCManFM
 * Sound: Pulseaudio
-* Music: mpd & ncmpcpp. Uses unix sockets
+* Music: mpd & ncmpcpp. Configured with unix sockets
 * Editors: vim, diffuse, bless
-* Screenshots: shutter (TODO: Switch to a more lightweight solution)
+* Screenshots: flameshot
 * Main font: Inconsolata 12
 
 ![Overview](https://github.com/martindube/dotfiles/raw/master/.dotfiles_files/my_theme.png)
@@ -34,6 +33,10 @@ cd $HOME
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 git clone --recursive --bare https://github.com/martindube/dotfiles $HOME/.dotfiles
 config checkout
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
+git clone https://github.com/Mashape/lua-ip .config/awesome/modules/lua-ip
+git clone https://github.com/copycat-killer/lain/ .config/awesome/lain
 ```
 
 Temporary hack.
